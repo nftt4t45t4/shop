@@ -25,11 +25,12 @@ function Header() {
       <header className="border-b border-neutral-200 bg-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="text-2xl font-extrabold tracking-tight text-neutral-900">SOLE</Link>
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-700">
+          <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-700">
             <Link href="/catalog" className="hover:text-black transition-colors">Все кроссовки</Link>
-            <Link href="/catalog?brand=balenciaga" className="hover:text-black transition-colors">Balenciaga</Link>
-            <Link href="/catalog?brand=rick-owens" className="hover:text-black transition-colors">Rick Owens</Link>
-            <Link href="/catalog?brand=margiela" className="hover:text-black transition-colors">Margiela</Link>
+            <Link href="/catalog?brand=nike" className="hover:text-black transition-colors">Nike</Link>
+            <Link href="/catalog?brand=adidas" className="hover:text-black transition-colors">adidas</Link>
+            <Link href="/catalog?brand=yeezy" className="hover:text-black transition-colors">Yeezy</Link>
+            <Link href="/catalog?brand=new-balance" className="hover:text-black transition-colors">New Balance</Link>
             <Link href="/catalog?sale=true" className="text-red-600 hover:text-red-500 transition-colors">Sale</Link>
           </nav>
           <div className="flex items-center gap-5 text-neutral-700">

@@ -4,12 +4,12 @@ import { products } from "@/lib/products";
 import ProductCard from "./components/ProductCard";
 import ProductImage from "./components/ProductImage";
 
-const brands = ["BALENCIAGA", "RICK OWENS", "MAISON MARGIELA", "OFF-WHITE", "VETEMENTS", "Y-3", "BALENCIAGA", "RICK OWENS", "MAISON MARGIELA", "OFF-WHITE", "VETEMENTS", "Y-3"];
+const brands = ["NIKE", "ADIDAS", "JORDAN", "YEEZY", "NEW BALANCE", "BALENCIAGA", "NIKE", "ADIDAS", "JORDAN", "YEEZY", "NEW BALANCE", "BALENCIAGA"];
 
 const reviews = [
-  { name: "Александр М.", city: "Москва", text: "Заказывал Triple S — пришли за 4 дня, всё оригинал: бирки, коробка, чек. Очень доволен!", rating: 5 },
-  { name: "Дмитрий К.", city: "СПб", text: "Брал Rick Owens, переживал из-за цены. Зря — качество топ, проверял по чекам. Рекомендую.", rating: 5 },
-  { name: "Игорь С.", city: "Казань", text: "Margiela GAT — то что искал. Поддержка ответила быстро, помогли с размером.", rating: 5 },
+  { name: "Александр М.", city: "Москва", text: "Заказывал Jordan 4 Cement — пришли за 4 дня, всё оригинал: бирки, коробка, чек. Очень доволен!", rating: 5 },
+  { name: "Дмитрий К.", city: "СПб", text: "Брал Yeezy 350, переживал из-за подделок. Зря — качество топ, проверял по чекам. Рекомендую.", rating: 5 },
+  { name: "Игорь С.", city: "Казань", text: "Adidas Samba — то что искал. Поддержка ответила быстро, помогли с размером.", rating: 5 },
 ];
 
 export default function Home() {
@@ -58,11 +58,11 @@ export default function Home() {
 
           <div className="relative">
             <div className="absolute -inset-4 bg-accent/10 rounded-[2.5rem] -rotate-3" />
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-white">
               <ProductImage
-                src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=900&h=1100&fit=crop"
-                alt="Premium sneakers"
-                brand="Balenciaga Triple S"
+                src="/products/jordan-1-silver.jpg"
+                alt="Air Jordan 1"
+                brand="Air Jordan 1"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -116,11 +116,11 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-4">
           {[
-            { name: "BALENCIAGA", slug: "balenciaga", img: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&h=500&fit=crop" },
-            { name: "RICK OWENS", slug: "rick-owens", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=500&fit=crop" },
-            { name: "MARGIELA", slug: "margiela", img: "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&h=500&fit=crop" },
+            { name: "NIKE / JORDAN", slug: "nike", img: "/products/jordan-4-cement.jpg" },
+            { name: "ADIDAS / YEEZY", slug: "yeezy", img: "/products/yeezy-350-onyx.jpg" },
+            { name: "NEW BALANCE", slug: "new-balance", img: "/products/new-balance-990.jpg" },
           ].map((b) => (
-            <Link key={b.slug} href={`/catalog?brand=${b.slug}`} className="group relative h-64 rounded-2xl overflow-hidden">
+            <Link key={b.slug} href={`/catalog?brand=${b.slug}`} className="group relative h-64 rounded-2xl overflow-hidden bg-white">
               <ProductImage src={b.img} alt={b.name} brand={b.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                 <h3 className="text-2xl font-black tracking-tight text-white mb-1">{b.name}</h3>
@@ -227,7 +227,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-neutral-500">
                 <li><Link href="/catalog" className="hover:text-black">Каталог</Link></li>
                 <li><Link href="/catalog?sale=true" className="hover:text-black">Распродажа</Link></li>
-                <li><Link href="/catalog?brand=balenciaga" className="hover:text-black">Balenciaga</Link></li>
+                <li><Link href="/catalog?brand=nike" className="hover:text-black">Nike</Link></li>
               </ul>
             </div>
             <div>

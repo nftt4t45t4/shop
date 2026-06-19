@@ -8,9 +8,11 @@ import { SlidersHorizontal } from "lucide-react";
 
 const brandList = [
   { slug: "all", label: "Все бренды" },
+  { slug: "nike", label: "Nike / Jordan" },
+  { slug: "adidas", label: "adidas" },
+  { slug: "yeezy", label: "adidas Yeezy" },
+  { slug: "new-balance", label: "New Balance" },
   { slug: "balenciaga", label: "Balenciaga" },
-  { slug: "rick-owens", label: "Rick Owens" },
-  { slug: "margiela", label: "Maison Margiela" },
 ];
 
 const allSizes = Array.from(new Set(products.flatMap((p) => p.sizes))).sort((a, b) => a - b);
